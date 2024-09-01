@@ -1,16 +1,9 @@
+# -*- coding: utf-8 -*-
 import time
 import sys
 
 # Define the text to be typed out
 text = "Привет, Соня. Я знаю, что может показаться, что я занят, но я всегда думаю о тебе, даже в напряженные моменты. Я люблю тебя, Соня! Всегда и навсегда, до конца времен. Не забывай мяукать!"
-
-# Cat ASCII Art
-cat_art = """
- /\_/\  
-( o.o ) 
- > ^ <
-Meow!
-"""
 
 # Function to simulate typing
 def simulated_typing(text, delay=0.1):
@@ -23,6 +16,13 @@ def simulated_typing(text, delay=0.1):
 # Run the simulated typing function
 simulated_typing(text, delay=0.05)
 
-# Pause before showing the cat
+# Pause before starting the "мяу" loop
 time.sleep(1)
-print(cat_art)
+
+# Infinite loop to print "мяу" (meow in Russian)
+try:
+    while True:
+        print("мяу")
+        time.sleep(0.5)  # Adjust the delay as needed
+except KeyboardInterrupt:
+    print("\nProgram terminated by user.")
